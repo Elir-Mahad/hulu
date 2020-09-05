@@ -12,7 +12,7 @@ function Nav() {
 			<h2>Romance</h2>
 			<h2>Mystery</h2>
 			<h2>Sci-fi</h2>
-			<h2>Westerb</h2>
+			<h2>Western</h2>
 			<h2>Animation</h2>
 			<h2>Movie</h2>
 		</div>
