@@ -1,0 +1,21 @@
+.header {
+	color: white;
+	display: flex;
+	padding: 20px;
+	align-items: center;
+	justify-content: space-between;
+	overflow-x: scroll;
+	background-color: black;
+}
+
+.header_icons {
+	display: flex;
+	align-items: center;
+	text-align: center;
+	color: white;
+}
+
+.header img {
+	object-fit: contain;
+	height: 80px;
+}
