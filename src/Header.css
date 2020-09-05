@@ -43,6 +43,13 @@
 	display: inline;
 }
 
+.header_icon--active p {
+	/*  This is for the home icon text. 
+		The text is always going to active and visible via the below display:inline-flex
+		We added the !important to make sure that no other rules override it*/
+	display: inline-flex !important;
+}
+
 .header_icon .MuiSvgIcon-root {
 	/* .MuiSvgIcon-root is the class name of the 
     icons which are imported from material-ui.

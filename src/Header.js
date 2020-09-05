@@ -13,7 +13,10 @@ function Header() {
 	return (
 		<div className="header">
 			<div className="header_icons">
-				<div className="header_icon">
+				<div className="header_icon header_icon--active">
+					{/* The 'home' p tag, is always visible, 
+					so we added the 'header_icon--active' 
+					to target it in the css */}
 					<HomeIcon />
 					<p> Home </p>
 				</div>
