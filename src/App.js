@@ -5,6 +5,8 @@ import Nav from "./Nav";
 import Results from "./Results";
 import requests from "./request.js";
 
+//! End of imports
+
 function App() {
 	//! useState below
 	const [selectedOption, setSelectedOption] = useState(requests.fetchTrending);

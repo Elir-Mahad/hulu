@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import "./Results.css";
 import VideoCard from "./VideoCard";
 import axios from "./axios.js";
+import FlipMove from "react-flip-move";
+
+//! End of imports
 
 function Results({ selectedOption }) {
 	//
@@ -38,16 +41,18 @@ function Results({ selectedOption }) {
 	// Code that will be rendered below
 	return (
 		<div className="results">
-			{movies.map((movie) => (
-				// map through each of the movie item
-				<VideoCard
-					//
-					key={movie.id}
-					//
-					movie={movie}
-					// go to the video card compoenent and pass in the movie as a prop
-				/>
-			))}
+			<FlipMove>
+				{movies.map((movie) => (
+					// map through each of the movie item
+					<VideoCard
+						//
+						key={movie.id}
+						//
+						movie={movie}
+						// go to the video card compoenent and pass in the movie as a prop
+					/>
+				))}
+			</FlipMove>
 		</div>
 	);
 }
