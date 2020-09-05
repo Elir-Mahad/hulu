@@ -1,7 +1,9 @@
 import React from "react";
 import "./VideoCard.css";
-
 import TextTruncate from "react-text-truncate";
+import { ThumbUpSharp } from "@material-ui/icons";
+
+//! End of imports
 
 const base_url = "https://image.tmdb.org/t/p/original/";
 
@@ -18,6 +20,7 @@ function VideoCard({ movie }) {
 				// or use movie.poster_path to get the movie poster
 				alt=""
 			/>
+
 			<TextTruncate
 				// Grab the movie.overview with the react-text-truncate tool
 				text={movie.overview}
@@ -31,8 +34,17 @@ function VideoCard({ movie }) {
 				// textTruncateChild={<a href="#">Read more</a>}
 				// in the href above you can insert the link to a url, where the reader can read more
 			/>
-			<h2>{movie.original_title}</h2>
-			{/* grab the movie title */}
+
+			<h2>{movie.original_title || movie.original_name} </h2>
+			{/* movie.original_title and movie.original_name are two data points in the tmdb json
+				both of these data points output the movie name
+				this line says use movie.original_title to get the movie poster
+				or use movie.original_name to get the movie poster */}
+			<p>
+				<ThumbUpSharp />
+				{/* the ThumpUp icon was imported from material ui */}
+				{movie.vote_count}
+			</p>
 		</div>
 	);
 }
