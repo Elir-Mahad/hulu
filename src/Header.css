@@ -5,6 +5,9 @@
 	align-items: center;
 	justify-content: space-between;
 	overflow-x: scroll;
+	/* This single line makes horizontal scrolling possible for the header.
+		Psuedo code would be: permisson granted to scroll horiontally on the x-axis.
+		Absolutely nuts.*/
 	background-color: black;
 }
 
