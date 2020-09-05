@@ -19,3 +19,20 @@
 .videoCard h2 {
 	padding-top: 10px;
 }
+
+.videoCard_stats {
+	/* the videocard stats, in VideoCard.js
+	contains the release date and movie votes.
+	It is hidden here because we want the stats
+	to only appear when the videoCard is hovered over. */
+	display: none;
+}
+
+.videoCard:hover > .videoCard_stats {
+	/* when the videoCard gets hovered over
+	access the element that has the class videoCard_stats
+	and change the display rules of that element
+	from display:none
+	to display:inline */
+	display: inline;
+}

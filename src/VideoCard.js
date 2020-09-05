@@ -40,7 +40,9 @@ function VideoCard({ movie }) {
 				both of these data points output the movie name
 				this line says use movie.original_title to get the movie poster
 				or use movie.original_name to get the movie poster */}
-			<p>
+			<p className="videoCard_stats">
+				{movie.release_date || movie.first_air_date}
+				{/* Show the movie release date or first date that it was aired */}
 				<ThumbUpSharp />
 				{/* the ThumpUp icon was imported from material ui */}
 				{movie.vote_count}
