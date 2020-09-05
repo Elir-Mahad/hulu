@@ -15,6 +15,45 @@
 	color: white;
 }
 
+.header_icon {
+	display: flex;
+	flex-direction: column;
+	cursor: pointer;
+	width: 100px;
+}
+
+.header_icon p {
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	font-size: small;
+	margin-left: auto;
+	margin-right: auto;
+	display: none;
+	/* we made this display:none
+        because we will only display it
+        when its hovered over. */
+}
+
+.header_icon:hover p {
+	/* When we hover over the header_icon, 
+    target the p tag of that header_icon, 
+    change the display rule for it,
+    from display:none, to display:inline 
+    and make the display inline */
+	display: inline;
+}
+
+.header_icon .MuiSvgIcon-root {
+	/* .MuiSvgIcon-root is the class name of the 
+    icons which are imported from material-ui.
+    To identify the class name, use inspector tools,
+    hover over elment, and it will show you the classnames of the element.  */
+	margin-left: auto;
+	margin-right: auto;
+	/* margin-right and left auto, is a way to center an element. */
+	font-size: 30px;
+}
+
 .header img {
 	object-fit: contain;
 	height: 80px;
