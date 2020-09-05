@@ -1,16 +1,25 @@
 import React from "react";
 import "./VideoCard.css";
 
+const base_url = "https://image.tmdb.org/t/p/original/";
+
 function VideoCard({ movie }) {
 	return (
 		<div className="videoCard">
 			<img
+				src={`
+					${base_url}
+					${movie.backdrop_path || movie.poster_path}`}
+				// backdrop_path and poster_path are two data points in the tmdb json
+				// both of these data points output the movie poster
+				// this line says use movie.backdrop_path to get the movie poster
+				// or use movie.poster_path to get the movie poster
 				alt=""
-				src="https://cdnb.artstation.com/p/assets/images/images/029/967/403/large/val-orlov-00-render-16-2.jpg?1599171585"
 			/>
-			<p>Movie overview</p>
-			<h2>Movie title</h2>
-			<p>number of likes</p>
+			<p>Movie: {movie.overview}</p>
+			{/* grab movie overview */}
+			<h2>Title: {movie.original_title}</h2>
+			{/* grab the movie title */}
 		</div>
 	);
 }
