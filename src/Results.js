@@ -4,6 +4,7 @@ import VideoCard from "./VideoCard";
 import axios from "./axios.js";
 
 function Results({ selectedOption }) {
+	//
 	//! UseState below
 	const [movies, setMovies] = useState([]);
 	// (movies) The constant movies contains an empty array
@@ -32,16 +33,16 @@ function Results({ selectedOption }) {
 		}
 
 		fetchData();
-	}, []);
+	}, [selectedOption]);
 
 	// Code that will be rendered below
 	return (
 		<div className="results">
-			{movies.map((movie, id) => (
+			{movies.map((movie) => (
 				// map through each of the movie item
 				<VideoCard
 					//
-					key={id}
+					key={movie.id}
 					//
 					movie={movie}
 					// go to the video card compoenent and pass in the movie as a prop
