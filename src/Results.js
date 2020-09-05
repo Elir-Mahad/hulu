@@ -5,7 +5,10 @@ import VideoCard from "./VideoCard";
 function Results() {
 	return (
 		<div className="results">
-			<h1>results</h1>
+			<VideoCard />
+			<VideoCard />
+			<VideoCard />
+			<VideoCard />
 			<VideoCard />
 		</div>
 	);

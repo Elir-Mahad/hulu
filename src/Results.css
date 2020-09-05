@@ -1,0 +1,7 @@
+.results {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	/* These above three lines,
+    created the gallery effect in hikiku */
+}
